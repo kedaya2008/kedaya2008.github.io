@@ -1,64 +1,278 @@
----
-layout: archive
-title: "CV"
-permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
----
+<!DOCTYPE html>
+<html lang="en" ondragstart="return false">
+ 
+<head>
+      <meta charset="UTF-8">
+      <meta name="Keywords" content="">
+      <meta name="Description" content="">
+      <title>3D旋转照片墙</title>
+      <style type="text/css">
+            /* 去掉默认效果 */
+            * {
+                  margin: 0;
+                  padding: 0;
+            }
+ 
+            body {
+                  background: #222;
+                  overflow: hidden;
+                  /* 取消选中 */
+                  user-select: none;
+ 
+            }
+ 
+            @keyframes rotate {
+                  100% {
+                        transform: rotateY(360deg);
+                  }
+            }
+ 
+            .perspective {
+                  /*子元素透视 场景深度*/
+                  perspective: 600px;
+            }
+ 
+            .wrap {
+                  /* 3d */
+                  width: 135px;
+                  height: 240px;
+                  margin: 100px auto;
+                  position: relative;
+                  /* border: 1px solid red; */
+                  transform: rotateX(-20deg) rotateY(0deg);
+                  transform-style: preserve-3d;
+ 
+            }
+ 
+            .wrap img {
+                  display: block;
+                  /* 绝对定位 */
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  transform: rotateY(0deg) translateZ(0px);
+                  background: transparent;
+                  box-shadow: 0 0 4px #fff;
+                  border-radius: 5px;
+ 
+                  /* webkit */
+            }
+ 
+            /* 照片底座 */
+            .wrap p {
+                  width: 1200px;
+                  height: 1200px;
+                  background: -webkit-radial-gradient(center center, 600px 600px, rgba(122, 122, 122, .5), rgba(0, 0, 0, 0));
+                  position: absolute;
+                  border-radius: 50%;
+                  left: 50%;
+                  top: 100%;
+                  margin-left: -600px;
+                  margin-top: -600px;
+                  /* 沿着x轴按倒 */
+                  transform: rotateX(90deg);
+ 
+            }
+      </style>
+</head>
+ 
+<body>
+      <!-- 盒子容器 -->
+      <div class="perspective">
+            <div class="wrap" id="imgwrap">
+                  <!-- 引入图片值页面 -->
+                  <img class="f1" src="img/12.png" />
+                  <img class="f1" src="img/13.png" />
+                  <img class="f1" src="img/14.png" />
+                  <img class="f1" src="img/15.png" />
+                  <img class="f1" src="img/16.png" />
+                  <img class="f1" src="img/1.png" />
+                  <img class="f1" src="img/2.png" />
+                  <img class="f1" src="img/3.png" />
+                  <img class="f1" src="img/4.png" />
+                  <img class="f1" src="img/5.png" />
+                  <img class="f1" src="img/6.png" />
+                  <img class="f1" src="img/7.png" />
+                  <img class="f1" src="img/5.png" />
+                  <img class="f1" src="img/6.png" />
+                  <img class="f1" src="img/7.png" />
+                  <img class="f1" src="img/8.png" />
+                  <img class="f1" src="img/9.png" />
+                  <img class="f1" src="img/10.png" />
+                  <img class="f1" src="img/11.png" />
+ 
+                  <img class="f1" src="img/17.png" />
+                  <img class="f1" src="img/18.png" />
+                  <img class="f1" src="img/19.png" />
+                  <img class="f1" src="img/20.png" />
+                  <img class="f1" src="img/21.png" />
+                  <img class="f1" src="img/22.png" />
+                  <img class="f1" src="img/23.png" />
+                  <img class="f1" src="img/24.png" />
+                  <img class="f1" src="img/25.png" />
+                  <img class="f1" src="img/26.png" />
+                  <img class="f1" src="img/27.png" />
+                  <img class="f1" src="img/28.png" />
+                  <img class="f1" src="img/29.png" />
+                  <img class="f1" src="img/30.png" />
+ 
+                  <!-- 引入图片值页面 -->
+                  <img class="f2" src="img/1.png" />
+                  <img class="f2" src="img/2.png" />
+                  <img class="f2" src="img/3.png" />
+                  <img class="f2" src="img/4.png" />
+                  <img class="f2" src="img/5.png" />
+ 
+                  <img class="f2" src="img/9.png" />
+                  <img class="f2" src="img/10.png" />
+                  <img class="f2" src="img/11.png" />
+                  <img class="f2" src="img/12.png" />
+                  <img class="f2" src="img/25.png" />
+                  <img class="f2" src="img/26.png" />
+                  <img class="f2" src="img/27.png" />
+                  <img class="f2" src="img/28.png" />
+                  <img class="f2" src="img/29.png" />
+                  <img class="f2" src="img/30.png" />
+                  <img class="f2" src="img/13.png" />
+                  <img class="f2" src="img/14.png" />
+                  <img class="f2" src="img/15.png" />
+                  <img class="f2" src="img/16.png" />
+                  <img class="f2" src="img/17.png" />
+                  <img class="f2" src="img/18.png" />
+                  <img class="f2" src="img/19.png" />
+                  <img class="f2" src="img/20.png" />
+                  <img class="f2" src="img/21.png" />
+                  <img class="f2" src="img/22.png" />
+                  <img class="f2" src="img/23.png" />
+                  <img class="f2" src="img/24.png" />
+                  <img class="f2" src="img/6.png" />
+                  <img class="f2" src="img/7.png" />
+                  <img class="f2" src="img/5.png" />
+                  <img class="f2" src="img/6.png" />
+                  <img class="f2" src="img/7.png" />
+                  <img class="f2" src="img/8.png" />
+                  <!-- 引入图片值页面 -->
+ 
+                  <img class="f3" src="img/1.png" />
+                  <img class="f3" src="img/2.png" />
+                  <img class="f3" src="img/11.png" />
+                  <img class="f3" src="img/12.png" />
+                  <img class="f3" src="img/25.png" />
+                  <img class="f3" src="img/26.png" />
+                  <img class="f3" src="img/27.png" />
+                  <img class="f3" src="img/3.png" />
+                  <img class="f3" src="img/4.png" />
+                  <img class="f3" src="img/5.png" />
+ 
+ 
+                  <img class="f3" src="img/16.png" />
+                  <img class="f3" src="img/17.png" />
+                  <img class="f3" src="img/18.png" />
+                  <img class="f3" src="img/10.png" />
+ 
+                  <img class="f3" src="img/28.png" />
+                  <img class="f3" src="img/29.png" />
+                  <img class="f3" src="img/30.png" />
+                  <img class="f3" src="img/13.png" />
+ 
+                  <img class="f3" src="img/19.png" />
+                  <img class="f3" src="img/20.png" />
+                  <img class="f3" src="img/21.png" />
+                  <img class="f3" src="img/22.png" />
+                  <img class="f3" src="img/23.png" />
+                  <img class="f3" src="img/24.png" />
+                  <img class="f3" src="img/9.png" />
+                  <img class="f3" src="img/14.png" />
+                  <img class="f3" src="img/15.png" />
+                  <img class="f3" src="img/6.png" />
+                  <img class="f3" src="img/7.png" />
+                  <img class="f3" src="img/5.png" />
+                  <img class="f3" src="img/6.png" />
+                  <img class="f3" src="img/7.png" />
+                  <img class="f3" src="img/8.png" />
+ 
+ 
+                  <p></p>
+            </div>
+      </div>
+      <!--  src="JS/photo.js" -->
+      <script type="text/javascript">
+            var oImg = document.getElementsByClassName('f1')
+            var oImg2 = document.getElementsByClassName('f2')
+            var oImg3 = document.getElementsByClassName('f3')
+            var len = oImg.length;
+            console.log(len)
+            var deg = 360 / len;
+ 
+            var oWrap = document.getElementById("imgwrap");
+            // var oWrap=document.querySelector('.wrap');
+ 
+            //页面加载完毕在执行的代码
+            window.onload = function () {
+                  Array.prototype.forEach.call(oImg, function (ele, index, self) {
+                        // 旋转并沿Z轴平移
+                        ele.style.transform = "rotateY(" + deg * index + "deg) translateZ(645.75px)";
+                        //过渡时间1s
+                        ele.style.transition = "1s " + (len - index) * 0.1 + "s";
+ 
+                  });
+                  Array.prototype.forEach.call(oImg2, function (ele, index, self) {
+                        // 旋转并沿Z轴平移
+                        ele.style.transform = "rotateY(" + deg * index + "deg) translateZ(645.75px) translateY(240px)";
+                        //过渡时间1s
+                        ele.style.transition = "1s " + (len - index) * 0.1 + "s";
+ 
+                  });
+                  Array.prototype.forEach.call(oImg3, function (ele, index, self) {
+                        // 旋转并沿Z轴平移
+                        ele.style.transform = "rotateY(" + deg * index + "deg) translateZ(645.75px) translateY(480px)";
+                        //过渡时间1s
+                        ele.style.transition = "1s " + (len - index) * 0.1 + "s";
+ 
+                  });
+                  // Array.prototype.forEach.call(oImg, function (ele, index, self) {
+                  //       // 旋转并沿Z轴平移
+                  //       ele.style.transform = "rotateY(" + deg * index + "deg) translateZ(350px)";
+                  //       //过渡时间1s
+                  //       ele.style.transition = "1s " + (len - index) * 0.1 + "s";
+ 
+                  // });
+ 
+            }
+            //翻动3D相册
+            var newX, newY, lastX, lastY, minusX, minusY, rotX = -20, rotY = 0;
+ 
+            document.onmousedown = function (e) {
+                  // 点击设置初值
+                  lastX = e.clientX;
+                  lastY = e.clientY;
+ 
+                  this.onmousemove = function (e) {
+                        newX = e.clientX;
+                        newY = e.clientY;
+                        minusX = newX - lastX;
+                        minusY = newY - lastY;
+ 
+                        rotX -= minusY * 0.2;
+                        rotY += minusX * 0.1;
+                        oWrap.style.transform = "rotateX(" + rotX + "deg) rotateY(" + rotY + "deg)";
+                        lastX = newX;
+                        lastY = newY;
+ 
+                  }
+                  this.onmouseup = function (e) {
+                        //鼠标松开
+                        this.onmousemove = null;//清除鼠标移动
+                  }
+            }
+ 
+      </script>
+</body>
+ 
+</html>
+成功了别忘了三连嗷~
+————————————————
 
-{% include base_path %}
-
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+                            @CSDN-懒羊羊.java的原创
+                        
+原文链接：https://blog.csdn.net/weixin_57535055/article/details/124385539
